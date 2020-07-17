@@ -5,11 +5,35 @@
   height: 100vh;
   width: var(--sidebar-width);
   background-color: map_get($baseColors,'white');
+  display: flex;
+  flex-direction: column;
   &_collapsed {
     --sidebar-width: #{$sidebar-width_collapsed};
   }
 
   &__header {
     height: $header-height;
+  }
+  &__footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 24px 9.5%;
+    display: flex;
+    justify-content: center;
+  }
+  &__button_toggle {
+    color: map_get($baseColors, 'gray');
+    font-weight: 500;
+    font-size: size(11px);
+    line-height: (size(11px) * 1.5);
+  }
+  &__icon_toggle {
+    margin-right: size(14px);
+    &_collapsed {
+      margin-right: 0;
+      path {
+        fill: map_get($baseColors, 'accent blue')
+      }
+    }
   }
 }

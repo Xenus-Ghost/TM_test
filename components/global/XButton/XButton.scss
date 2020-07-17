@@ -33,4 +33,12 @@
       color: map_get($baseColors, 'icon gray');
     }
   }
+
+  &_tertiary {
+    background-color: transparent;
+  }
+
+  &__icon-left {
+    margin-right: size(14px);
+  }
 }

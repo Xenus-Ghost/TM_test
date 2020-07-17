@@ -5,6 +5,11 @@
     :class="[classList]"
     @click="$emit('click')"
   >
+    <slot
+      v-if="!!$slots['iconLeft']"
+      name="icon-left"
+      class="x-button__icon-left"
+    ></slot>
     <slot></slot>
   </component>
 </template>
