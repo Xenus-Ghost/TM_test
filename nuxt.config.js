@@ -1,11 +1,8 @@
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/TM_test/',
-        },
-      }
-    : {}
+const routerBase = {
+  router: {
+    base: '/TM_test/',
+  },
+}
 
 export default {
   ...routerBase,
