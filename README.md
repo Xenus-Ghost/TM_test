@@ -1,6 +1,7 @@
 # TM_test
 
-## Build Setup
+#####github pages
+https://xenus-ghost.github.io/TM_test/
 
 ```bash
 # install dependencies
@@ -16,5 +17,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
