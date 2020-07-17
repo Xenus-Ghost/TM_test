@@ -31,15 +31,15 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: '/font/poppins.css' },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Global CSS
    */
-  css: [{ src: './assets/scss/index.scss', lang: 'scss' }],
+  css: [
+    { src: './assets/scss/index.scss', lang: 'scss' },
+    { src: './assets/font/poppins.css', lang: 'css' },
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
