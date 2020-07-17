@@ -1,0 +1,31 @@
+@import "assets/scss/base";
+.x-input_checkbox {
+  cursor: pointer;
+  &__input {
+    display: none;
+  }
+
+  &__label::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  &__input[type="checkbox"]:checked + .x-input_checkbox__label::before {
+    background-image: url('~assets/img/icon/checkbox-checked.svg');
+    background-color: map_get($baseColors,'accent blue');
+    border-color: map_get($baseColors,'accent blue');
+    background-size: 7px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

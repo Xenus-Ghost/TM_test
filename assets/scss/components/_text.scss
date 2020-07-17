@@ -1,0 +1,71 @@
+.text{
+  &-regular {
+    $font-weight: normal;
+    &_10 {
+      font-weight: $font-weight;
+      font-size: size(10px);
+      line-height: (size(10px) * 1.5);
+    }
+    &_11 {
+      font-weight: $font-weight;
+      font-size: size(11px);
+      line-height: (size(11px) * 1.5);
+    }
+    &_12 {
+      font-weight: $font-weight;
+      font-size: size(12px);
+      line-height: (size(12px) * 1.5);
+    }
+    &_13 {
+      font-weight: $font-weight;
+      font-size: size(13px);
+      line-height: (size(13px) * 1.5);
+    }
+  }
+  &-medium{
+    $font-weight: 500;
+    &_11 {
+      font-weight: $font-weight;
+      font-size: size(11px);
+      line-height: (size(11px) * 1.5);
+    }
+    &_12 {
+      font-weight: $font-weight;
+      font-size: size(12px);
+      line-height: (size(12px) * 1.5);
+    }
+    &_13 {
+      font-weight: $font-weight;
+      font-size: size(13px);
+      line-height: (size(13px) * 1.5);
+    }
+    &_14 {
+      font-weight: $font-weight;
+      font-size: size(14px);
+      line-height: (size(14px) * 1.5);
+    }
+    &_15 {
+      font-weight: $font-weight;
+      font-size: size(15px);
+      line-height: (size(15px) * 1.5);
+    }
+    &_18 {
+      font-weight: $font-weight;
+      font-size: size(18px);
+      line-height: (size(18px) * 1.5);
+    }
+    &_56 {
+      font-weight: $font-weight;
+      font-size: size(56px);
+      line-height: (size(56px) * 1.5);
+    }
+  }
+  &-semibold {
+    $font-weight: 900;
+    &_13 {
+      font-weight: $font-weight;
+      font-size: size(13px);
+      line-height: (size(13px) * 1.5);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "assets/scss/base";
+$card-bg: map_get($baseColors, 'White');
+$card-shadow-color: rgba(0, 0, 0, 0.06);
+.x-card {
+  background-color: $card-bg;
+  box-shadow: 0 6px 18px $card-shadow-color;
+}

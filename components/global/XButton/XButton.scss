@@ -1,0 +1,36 @@
+@import "assets/scss/base";
+.x-button {
+  display: inline-flex;
+  padding: size(11px) size(14px);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: size(13px);
+  line-height: size(13px) * 1.5;
+  @each $name, $value in $baseColors {
+    &_color-#{$name} {
+      background-color: #{$value};
+    }
+  }
+  &_accent {
+    background-color: map_get($baseColors, 'accent blue');
+    color: map_get($baseColors, 'white');
+    box-shadow: 0 4px 10px rgba(16, 156, 241, 0.24);
+    &:hover {
+      background-color: #34AFF9;
+    }
+    &:active {
+      background-color: #098EDF;
+    }
+    &:disabled {
+      background-color: map_get($baseColors, 'icon gray');
+    }
+  }
+  &_secondary {
+    &:disabled {
+      color: map_get($baseColors, 'icon gray');
+    }
+  }
+}

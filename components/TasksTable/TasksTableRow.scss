@@ -1,0 +1,14 @@
+.tasks-table__row {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #EBEFF2;
+  }
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+.tasks-table__cell {
+  flex: 100%;
+}

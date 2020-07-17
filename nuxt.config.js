@@ -24,17 +24,20 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: '/font/poppins.css' },
+    ],
   },
   /*
    ** Global CSS
    */
-  css: [],
+  css: [{ src: './assets/scss/index.scss', lang: 'scss' }],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['~/plugins/globalComponents.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

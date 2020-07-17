@@ -1,0 +1,15 @@
+@import "assets/scss/base";
+.sidebar{
+  --sidebar-width: #{$sidebar-width_open};
+
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: map_get($baseColors,'white');
+  &_collapsed {
+    --sidebar-width: #{$sidebar-width_collapsed};
+  }
+
+  &__header {
+    height: $header-height;
+  }
+}

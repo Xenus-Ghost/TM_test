@@ -1,0 +1,7 @@
+@import "assets/scss/base";
+.x-search-bar {
+  width: 100%;
+  background-color: map_get($baseColors, 'white');
+  padding: 20px;
+  &__input {}
+}
