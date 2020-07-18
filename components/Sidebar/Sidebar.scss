@@ -37,3 +37,34 @@
     }
   }
 }
+
+.sidebar-menu {
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 25px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: map_get($baseColors, 'dark blue text');
+    text-decoration: none;
+    path {
+      stroke: map_get($baseColors, 'dark blue text');
+    }
+    &.nuxt-link-exact-active {
+      color: map_get($baseColors, 'accent blue');
+      path {
+        stroke: map_get($baseColors, 'accent blue');
+      }
+    }
+  }
+  &__icon {
+    margin-right: 1rem;
+  }
+}
