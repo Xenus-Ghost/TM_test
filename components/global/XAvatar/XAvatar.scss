@@ -1,3 +1,12 @@
+@import "assets/scss/base";
 .x-avatar {
-  border-radius: 50%;
+  cursor: pointer;
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid transparent;
+    &:hover {
+      box-shadow: 0 0 0 2px map_get($baseColors, 'accent blue');
+    }
+  }
 }

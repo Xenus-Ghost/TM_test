@@ -1,12 +1,18 @@
 <template>
   <div class="x-avatar">
-    <img src="" alt="" class="x-avatar__image" />
+    <img :src="img" class="x-avatar__image" />
   </div>
 </template>
 
 <script>
 export default {
   name: 'XAvatar',
+  props: {
+    img: {
+      type: String,
+      default: null,
+    },
+  },
 }
 </script>
 

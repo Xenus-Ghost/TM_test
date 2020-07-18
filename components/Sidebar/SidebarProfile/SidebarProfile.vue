@@ -1,12 +1,15 @@
 <template>
-  <div class="sidebar__profile">
-    <XAvatar></XAvatar>
+  <div class="sidebar__profile sidebar-profile">
+    <x-avatar
+      class="sidebar-profile__avatar"
+      :img="profileData.avatar"
+    ></x-avatar>
     <div class="sidebar-profile__info">
-      <div class="sidebar-profile__name">
-        Sierra Ferguson
+      <div class="text-medium_14 sidebar-profile__name">
+        {{ profileData.name }}
       </div>
-      <div class="sidebar-profile__contact">
-        s.ferguson@gmail.com
+      <div class="text-medium_11 sidebar-profile__email">
+        {{ profileData.email }}
       </div>
     </div>
   </div>
@@ -18,6 +21,15 @@ export default {
   name: 'SidebarProfile',
   components: {
     XAvatar,
+  },
+  data() {
+    return {
+      profileData: {
+        avatar: 'img/avatar.jpg',
+        name: 'Sierra Ferguson',
+        email: 's.ferguson@gmail.com',
+      },
+    }
   },
 }
 </script>

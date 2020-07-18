@@ -1,8 +1,18 @@
+@import "assets/scss/base";
 .sidebar-profile {
+  padding: 25px;
+  display: flex;
+  &__avatar {
+    margin-right: 1rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
   &__name {
-    
+    color: map_get($baseColors, 'black')
   }
   &__email {
-
+    color: map_get($baseColors, 'gray')
   }
 }
