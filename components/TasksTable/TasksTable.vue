@@ -1,15 +1,31 @@
 <template>
-  <div class="tasks-table">
-    <div class="tasks-table__header">
-      <x-checkbox :id="'table__select-all'" />
-      <div class="tasks-table__cell_title text-medium_13">Email</div>
-      <div class="tasks-table__cell_title text-medium_13">Company name</div>
-      <div class="tasks-table__cell_title text-medium_13">Role</div>
-      <div class="tasks-table__cell_title text-medium_13">Forecast</div>
-      <div class="tasks-table__cell_title text-medium_13">Recent activity</div>
-    </div>
-    <tasks-table-row v-for="(item, i) in items" :key="i" :row-data="item" />
-  </div>
+  <table class="tasks-table">
+    <colgroup>
+      <col class="tasks-table__column_1" />
+      <col class="tasks-table__column_2" />
+      <col class="tasks-table__column_3" />
+      <col class="tasks-table__column_4" />
+      <col class="tasks-table__column_5" />
+      <col class="tasks-table__column_6" />
+    </colgroup>
+    <tbody>
+      <tr class="tasks-table__header">
+        <th>
+          <x-checkbox
+            :id="'table__select-all'"
+            class="tasks-table__cell_title tasks-table__cell_checkbox"
+          />
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">Name</th>
+        <th class="tasks-table__cell_title text-medium_13">Email</th>
+        <th class="tasks-table__cell_title text-medium_13">Company name</th>
+        <th class="tasks-table__cell_title text-medium_13">Role</th>
+        <th class="tasks-table__cell_title text-medium_13">Forecast</th>
+        <th class="tasks-table__cell_title text-medium_13">Recent activity</th>
+      </tr>
+      <tasks-table-row v-for="(item, i) in items" :key="i" :row-data="item" />
+    </tbody>
+  </table>
 </template>
 
 <script>

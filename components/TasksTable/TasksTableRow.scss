@@ -1,7 +1,8 @@
+@import "assets/scss/base";
+
 .tasks-table__row {
   display: flex;
   align-items: center;
-  padding: 22px;
   &:not(:last-of-type) {
     border-bottom: 1px solid #EBEFF2;
   }
@@ -11,4 +12,20 @@
 }
 .tasks-table__cell {
   flex: 100%;
+  padding: 22px;
+  color: map_get($baseColors, 'table gray');
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  &__avatar {
+    margin-right: 12px;
+  }
+  &_name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: map_get($baseColors, 'table black');
+    display: flex;
+  }
 }

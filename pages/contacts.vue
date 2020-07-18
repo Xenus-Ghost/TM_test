@@ -15,6 +15,7 @@ export default {
     return {
       tasks: [
         {
+          avatar: 'img/avatar_1.jpg',
           name: 'Lindsey Stroud',
           email: 'lindsey.stroud@gmail.com',
           companyName: 'Hatchbuck',
@@ -23,6 +24,7 @@ export default {
           recentActivity: '5 Minutes ago',
         },
         {
+          avatar: 'img/avatar_2.jpg',
           name: 'Lindsey Stroud',
           email: 'lindsey.stroud@gmail.com',
           companyName: 'Hatchbuck',
@@ -31,6 +33,7 @@ export default {
           recentActivity: '5 Minutes ago',
         },
         {
+          avatar: 'img/avatar_1.jpg',
           name: 'Lindsey Stroud',
           email: 'lindsey.stroud@gmail.com',
           companyName: 'Hatchbuck',
@@ -39,6 +42,7 @@ export default {
           recentActivity: '5 Minutes ago',
         },
         {
+          avatar: 'img/avatar_2.jpg',
           name: 'Lindsey Stroud',
           email: 'lindsey.stroud@gmail.com',
           companyName: 'Hatchbuck',

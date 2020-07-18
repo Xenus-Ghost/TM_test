@@ -1,25 +1,31 @@
 <template>
-  <div class="tasks-table__row">
-    <x-checkbox :id="`${_uid}`" />
-    <div class="tasks-table__cell tasks-table__cell_name">
+  <tr class="tasks-table__row">
+    <td>
+      <x-checkbox
+        :id="`${_uid}`"
+        class="tasks-table__cell tasks-table__cell_checkbox"
+      />
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_name">
+      <x-avatar :img="rowData.avatar" class="tasks-table__cell__avatar" />
       {{ rowData.name }}
-    </div>
-    <div class="tasks-table__cell tasks-table__cell_email">
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_email">
       {{ rowData.email }}
-    </div>
-    <div class="tasks-table__cell tasks-table__cell_company-name">
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_company-name">
       {{ rowData.companyName }}
-    </div>
-    <div class="tasks-table__cell tasks-table__cell_role">
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_role">
       {{ rowData.role }}
-    </div>
-    <div class="tasks-table__cell tasks-table__cell_forecast">
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_forecast">
       {{ rowData.forecast }}
-    </div>
-    <div class="tasks-table__cell tasks-table__cell_recent_activity">
+    </td>
+    <td class="tasks-table__cell tasks-table__cell_recent_activity">
       {{ rowData.recentActivity }}
-    </div>
-  </div>
+    </td>
+  </tr>
 </template>
 
 <script>
