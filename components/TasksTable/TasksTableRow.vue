@@ -2,8 +2,9 @@
   <tr class="tasks-table__row">
     <td>
       <x-checkbox
-        :id="`${_uid}`"
+        :id="`${rowData.id}`"
         class="tasks-table__cell tasks-table__cell_checkbox"
+        @click="$emit('rowSelect', rowData.id)"
       />
     </td>
     <td class="tasks-table__cell tasks-table__cell_name">

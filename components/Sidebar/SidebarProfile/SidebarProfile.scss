@@ -1,9 +1,12 @@
 @import "assets/scss/base";
 .sidebar-profile {
-  padding: 25px;
+  padding: 25px 9.5%;
   display: flex;
   &__avatar {
     margin-right: 1rem;
+    &_collapsed {
+      margin-right: 0;
+    }
   }
   &__info {
     display: flex;

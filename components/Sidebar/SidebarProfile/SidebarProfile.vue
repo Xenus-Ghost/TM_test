@@ -1,10 +1,13 @@
 <template>
   <div class="sidebar__profile sidebar-profile">
     <x-avatar
-      class="sidebar-profile__avatar"
+      :class="[
+        'sidebar-profile__avatar',
+        { 'sidebar-profile__avatar_collapsed': collapsed },
+      ]"
       :img="profileData.avatar"
     ></x-avatar>
-    <div class="sidebar-profile__info">
+    <div v-show="!collapsed" class="sidebar-profile__info">
       <div class="text-medium_14 sidebar-profile__name">
         {{ profileData.name }}
       </div>
@@ -21,6 +24,12 @@ export default {
   name: 'SidebarProfile',
   components: {
     XAvatar,
+  },
+  props: {
+    collapsed: {
+      type: Boolean,
+      default: null,
+    },
   },
   data() {
     return {

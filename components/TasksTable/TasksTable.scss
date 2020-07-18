@@ -20,4 +20,7 @@
     color: map_get($baseColors, 'dark blue text');
     opacity: 0.5;
   }
+  &__column_hidden {
+    visibility: collapse;
+  }
 }

@@ -3,7 +3,7 @@
     <div class="sidebar__header">
       <slot name="header"></slot>
     </div>
-    <sidebar-profile />
+    <sidebar-profile :collapsed="collapsed" />
     <div class="sidebar__content">
       <ul class="sidebar__menu sidebar-menu__list">
         <li class="sidebar-menu__item">
