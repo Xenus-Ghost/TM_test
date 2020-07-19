@@ -1,9 +1,8 @@
 <template>
   <tr class="tasks-table__row">
-    <td>
+    <td class="tasks-table__cell tasks-table__cell_checkbox">
       <x-checkbox
         :id="`${rowData.id}`"
-        class="tasks-table__cell tasks-table__cell_checkbox"
         @click="$emit('rowSelect', rowData.id)"
       />
     </td>

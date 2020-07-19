@@ -21,9 +21,13 @@
     overflow-x: hidden;
     width: 0.5rem;
     max-width: 0.5rem;
-    border-left: 1px solid #EBEFF2;
+    //border-left: 1px solid #EBEFF2;
     padding-left: 2px;
     padding-right: 2px;
+    display: table-cell !important;
+  }
+  &_checkbox {
+    width: 19px;
   }
   &__avatar {
     margin-right: 12px;

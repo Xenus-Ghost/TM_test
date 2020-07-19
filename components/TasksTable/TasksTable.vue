@@ -125,7 +125,7 @@ export default {
           visible: true,
         },
         email: {
-          visible: false,
+          visible: true,
         },
         companyName: {
           visible: true,
