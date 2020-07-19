@@ -6,11 +6,11 @@
   max-width: 100%;
   padding-left: 4px;
   padding-right: 4px;
-  @media screen and ($breakpoint-sm){
+  @media screen and (min-width: $breakpoint-sm){
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  @media screen and ($breakpoint-md){
+  @media screen and (min-width: $breakpoint-md){
     padding-left: 36px;
     padding-right: 36px;
   }
