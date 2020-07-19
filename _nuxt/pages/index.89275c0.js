@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{310:function(n,t,e){"use strict";e.r(t);var l={},o=e(2),component=Object(o.a)(l,(function(){var n=this.$createElement,t=this._self._c||n;return t("x-container",[t("h1",[this._v("Dashboard")])])}),[],!1,null,null,null);t.default=component.exports;installComponents(component,{XContainer:e(105).default})}}]);
