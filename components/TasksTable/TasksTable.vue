@@ -3,68 +3,104 @@
     <colgroup>
       <col class="tasks-table__column_1" />
       <col
-        class="tasks-table__column_2"
         :class="[
           'tasks-table__column_2',
           { 'tasks-table__column_hidden': !fields.name.visible },
         ]"
       />
       <col
-        class="tasks-table__column_3"
         :class="[
-          'tasks-table__column_2',
+          'tasks-table__column_3',
           { 'tasks-table__column_hidden': !fields.email.visible },
         ]"
       />
       <col
-        class="tasks-table__column_4"
         :class="[
-          'tasks-table__column_2',
+          'tasks-table__column_4',
           { 'tasks-table__column_hidden': !fields.companyName.visible },
         ]"
       />
       <col
-        class="tasks-table__column_5"
         :class="[
-          'tasks-table__column_2',
+          'tasks-table__column_5',
           { 'tasks-table__column_hidden': !fields.role.visible },
         ]"
       />
       <col
-        class="tasks-table__column_6"
         :class="[
-          'tasks-table__column_2',
+          'tasks-table__column_6',
           { 'tasks-table__column_hidden': !fields.forecast.visible },
         ]"
       />
       <col
-        class="tasks-table__column_7"
         :class="[
-          'tasks-table__column_2',
+          'tasks-table__column_7',
           { 'tasks-table__column_hidden': !fields.recentActivity.visible },
         ]"
       />
     </colgroup>
-    <tr class="tasks-table__header">
-      <th>
-        <x-checkbox
-          :id="'table__select-all'"
-          class="tasks-table__cell_title tasks-table__cell_checkbox"
-        />
-      </th>
-      <th class="tasks-table__cell_title text-medium_13">Name</th>
-      <th class="tasks-table__cell_title text-medium_13">Email</th>
-      <th class="tasks-table__cell_title text-medium_13">Company name</th>
-      <th class="tasks-table__cell_title text-medium_13">Role</th>
-      <th class="tasks-table__cell_title text-medium_13">Forecast</th>
-      <th class="tasks-table__cell_title text-medium_13">Recent activity</th>
-    </tr>
-    <tasks-table-row
-      v-for="(item, i) in items"
-      :key="i"
-      :row-data="item"
-      @row-select="rowSelect(id)"
-    />
+    <tbody>
+      <tr class="tasks-table__header">
+        <th>
+          <x-checkbox
+            :id="'table__select-all'"
+            class="tasks-table__cell_title tasks-table__cell_checkbox"
+          />
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="fields.name.visible = !fields.name.visible"
+            >{{ !!fields.name.visible ? '-' : '+' }}</span
+          >
+          Name
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="fields.email.visible = !fields.email.visible"
+            >{{ !!fields.email.visible ? '-' : '+' }}</span
+          >Email
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="fields.companyName.visible = !fields.companyName.visible"
+            >{{ !!fields.companyName.visible ? '-' : '+' }}</span
+          >Company name
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="fields.role.visible = !fields.role.visible"
+            >{{ !!fields.role.visible ? '-' : '+' }}</span
+          >Role
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="fields.forecast.visible = !fields.forecast.visible"
+            >{{ !!fields.forecast.visible ? '-' : '+' }}</span
+          >Forecast
+        </th>
+        <th class="tasks-table__cell_title text-medium_13">
+          <span
+            class="tasks-table__icon_toggle"
+            @click="
+              fields.recentActivity.visible = !fields.recentActivity.visible
+            "
+            >{{ !!fields.recentActivity.visible ? '-' : '+' }}</span
+          >Recent activity
+        </th>
+      </tr>
+      <tasks-table-row
+        v-for="(item, i) in items"
+        :key="i"
+        :fields="fields"
+        :row-data="item"
+        @row-select="rowSelect(id)"
+      />
+    </tbody>
   </table>
 </template>
 
