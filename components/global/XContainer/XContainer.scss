@@ -4,6 +4,14 @@
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  @media screen and ($breakpoint-sm){
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media screen and ($breakpoint-md){
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }

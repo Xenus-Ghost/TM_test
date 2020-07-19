@@ -11,11 +11,14 @@
   }
 }
 .tasks-table__cell {
-  padding: 22px;
+  padding: 4px;
   color: map_get($baseColors, 'table gray');
   font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: size(13px);
+  line-height: size(19px);
+  @media screen and (min-width: $breakpoint-sm){
+    padding: size(22px);
+  }
   &_collapse {
     visibility: collapse;
     overflow-x: hidden;
@@ -27,17 +30,22 @@
     display: table-cell !important;
   }
   &_checkbox {
-    width: 19px;
+    width: size(19px);
+    height: size(19px);
   }
   &__avatar {
-    margin-right: 12px;
+    margin-right: size(12px);
   }
   &_name {
     font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: size(15px);
+    line-height: size(22px);
     letter-spacing: 0.01em;
     color: map_get($baseColors, 'table black');
     display: flex;
+    @media screen and (min-width: $breakpoint-sm){
+      font-size: size(12px);
+      line-height: size(15px);
+    }
   }
 }
